@@ -1,0 +1,3 @@
+[submodule "KBAPISupport"]
+	path = KBAPISupport
+	url = https://byss@github.com/byss/KBAPISupport.git
