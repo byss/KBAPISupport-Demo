@@ -77,13 +77,13 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	F_START
+	KBAPISUPPORT_F_START
 	
 	WPArticleHeader *header = [_list entityForIndex:indexPath.row];
 	KBAPISUPPORT_LOG (@"%@ %@", header.link, [header.link class]);
 	[[UIApplication sharedApplication] openURL:header.link];
 	
-	F_END
+	KBAPISUPPORT_F_END
 }
 
 - (void) viewWillAppear:(BOOL)animated {

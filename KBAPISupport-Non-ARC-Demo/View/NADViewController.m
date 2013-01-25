@@ -140,7 +140,7 @@
 	} else if ([_contents isKindOfClass:[NSArray class]]) {
 		return [self tableView:tableView cellForArrayAtIndexPath:indexPath];
 	} else {
-		BUG_HERE
+		KBAPISUPPORT_BUG_HERE
 		return [self tableView:tableView cellForUnknownAtIndexPath:indexPath];
 	}
 }

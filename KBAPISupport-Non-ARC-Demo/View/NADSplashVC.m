@@ -71,13 +71,13 @@
 }
 
 - (void) apiConnection:(KBAPIConnection *)connection didReceiveJSON:(id)JSON {
-	F_START
+	KBAPISUPPORT_F_START
 	
 	KBAPISUPPORT_LOG (@"JSON: %@", JSON);
 	if (![JSON isKindOfClass:[NSDictionary class]]) {
 		[self loadingFailed];
 
-		F_END
+		KBAPISUPPORT_F_END
 		return;
 	}
 	
@@ -85,7 +85,7 @@
 	if (![baseAddress isKindOfClass:[NSString class]]) {
 		[self loadingFailed];
 		
-		F_END
+		KBAPISUPPORT_F_END
 		return;
 	}
 	
@@ -93,7 +93,7 @@
 	if (![delimiter isKindOfClass:[NSString class]]) {
 		[self loadingFailed];
 		
-		F_END
+		KBAPISUPPORT_F_END
 		return;
 	}
 	
@@ -104,7 +104,7 @@
 		if (!([[JSON objectForKey:field] isKindOfClass:[NSArray class]] && [[JSON objectForKey:field] count])) {
 			[self loadingFailed];
 			
-			F_END
+			KBAPISUPPORT_F_END
 			return;
 		}
 	}
